@@ -1,8 +1,12 @@
 class Person{
-
+    constructor(name, first, second){
+        this.name = name;
+        this.first = first;
+        this.second = second;
+    }
 }
 
-var kim = new Person();
+var kim = new Person('kim', 10, 20);
 console.log('kim', kim);
 
 // kim.sum = function(){
