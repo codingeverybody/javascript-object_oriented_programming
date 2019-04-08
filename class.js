@@ -5,14 +5,15 @@ class Person{
         this.second = second;
     }
     sum(){
-        return 'prototype : '+(this.first+this.second);
+        return this.first+this.second;
+    }
+}
+class PersonPlus extends Person{
+    avg(){
+        return (this.first+this.second)/2;
     }
 }
 
-var kim = new Person('kim', 10, 20);
-kim.sum = function(){
-    return 'this : '+(this.first+this.second);
-}
-var lee = new Person('lee', 10, 10);
+var kim = new PersonPlus('kim', 10, 20);
 console.log("kim.sum()", kim.sum());
-console.log("lee.sum()", lee.sum());
+console.log("kim.avg()", kim.avg());
