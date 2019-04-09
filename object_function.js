@@ -6,3 +6,5 @@ function sum(prefix){
 // sum();
 console.log("sum.call(kim)", sum.call(kim, '=> ')); //apply
 console.log("lee.call(kim)", sum.call(lee, ': '));
+var kimSum = sum.bind(kim, '-> ');
+console.log('kimSum()', kimSum());
