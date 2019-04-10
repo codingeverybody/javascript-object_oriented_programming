@@ -11,9 +11,11 @@ function PersonPlus(name, first, second, third){
     Person.call(this, name,first,second);
     this.third = third;
 }
+// PersonPlus.prototype.__proto__ = Person.prototype;
+PersonPlus.prototype = Object.create(Person.prototype)
 
 PersonPlus.prototype.avg = function(){
-    return (this.first+this.second+this.thrid)/3;
+    return (this.first+this.second+this.third)/3;
 }
 var kim = new PersonPlus('kim', 10, 20, 30);
 console.log("kim.sum()", kim.sum());
